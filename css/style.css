@@ -22,9 +22,14 @@ body {
 }
 
 aside {
+    width: 15%;
     background-color: var(--green);
     display: flex;
     flex-flow: column;
+}
+
+aside.collapse {
+    transition: left 1s ease-in-out;
 }
 
 ul {
@@ -54,7 +59,7 @@ ul {
 .menu-header {
     width: 90%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     margin-top: 1rem;
 }
 
@@ -70,14 +75,11 @@ ul {
 
 /* control menu visibility */
 
-.item-desc {
+.show-hide {
     display: none;
 }
 
-.profile-pic {
-    display: none;
-}
 
-#logo {
-    display: none;
+.collapse {
+    width: fit-content;
 }
