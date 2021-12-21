@@ -32,13 +32,12 @@ ul {
     flex-flow: column;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
-    gap: 1.5rem;
+    padding: .5rem;
+    gap: 1rem;
 }
 
 .menu-item {
     width: 100%;
-    align-self: flex-start;
     cursor: pointer;
     list-style: none;
     display: flex;
@@ -55,17 +54,24 @@ ul {
 .menu-header {
     width: 90%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    margin-top: 1rem;
 }
 
 .user-card {
     width: 100%;
     background-color: var(--light-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
     margin-top: auto;
 }
 
+/* control menu visibility */
+
 .item-desc {
-    display: unset;
+    display: none;
 }
 
 .profile-pic {
@@ -73,5 +79,5 @@ ul {
 }
 
 #logo {
-    display: unset;
+    display: none;
 }
