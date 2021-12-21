@@ -6,37 +6,41 @@
     <meta name="description" content="Sidebar challenge from Rocketseat">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet"> 
     <title>Sidebar Challenge</title>
 </head>
 <body>
-    
+
     <aside>
         <nav class="menu">
-            <section class="menu-header">
-                <img src="./assets/menu.svg" alt="">
-            </section>
             <ul>
-                <li class="menu-item"></li>
-                <li class="menu-item"></li>
-                <li class="menu-item"></li>
-                <li class="menu-item"></li>
-                <li class="menu-item"></li>
-                <li class="menu-item"></li>
+                <section class="menu-header">
+                    <img src="./assets/logo.svg" alt="" id="logo">
+                    <img src="./assets/menu.svg" alt="" id="hamburger">
+                </section>
+                <li class="menu-item"><img src="./assets/search.svg" alt="Search button"><span class="item-desc">Search</span></li>
+                <li class="menu-item"><img src="./assets/grid.svg" alt="Dashboard button"><span class="item-desc">Dashboard</span></li>
+                <li class="menu-item"><img src="./assets/search.svg" alt="Search button"><span class="item-desc">Pets</span></li>
+                <li class="menu-item"><img src="./assets/search.svg" alt="Search button"><span class="item-desc">Users</span></li>
+                <li class="menu-item"><img src="./assets/search.svg" alt="Search button"><span class="item-desc">Vets</span></li>
+                <li class="menu-item"><img src="./assets/search.svg" alt="Search button"><span class="item-desc">Settings</span></li>
             </ul>
-            <section class="user-card">
-                <figure class="profile-pic">
-                    <figcaption>
-                        <p>Lorem Ipsum</p>
-                        <p>Dolor</p>
-                    </figcaption>
-                </figure>
-            </section>
         </nav>
+        <section class="user-card">
+            <figure class="profile-pic">
+                <!-- <img src="./assets/photo.jpg" alt=""> -->
+                <figcaption>
+                    <p>Lorem Ipsum</p>
+                    <p>Dolor</p>
+                </figcaption>
+            </figure>
+            <img src="./assets/log-out.svg" alt="">
+        </section>
     </aside>
 
-    <main>
-        <h1>Dashboard</h1>
-    </main>
+    <h1>Dashboard</h1>
 
     <script src="./scripts/index.js"></script>
 </body>
