@@ -21,18 +21,20 @@ body {
     display: flex;
 }
 
+main {
+    width: 100%;
+}
+
 aside {
-    width: 15%;
+    width: 20em;
     background-color: var(--green);
     display: flex;
     flex-flow: column;
-}
-
-aside.collapse {
-    transition: left 1s ease-in-out;
+    overflow-x: hidden;
 }
 
 ul {
+    max-width: 100%;
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -79,7 +81,10 @@ ul {
     display: none;
 }
 
-
 .collapse {
     width: fit-content;
+}
+
+.justify-center {
+    justify-content: center;
 }

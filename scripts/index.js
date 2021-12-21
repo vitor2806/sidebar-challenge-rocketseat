@@ -4,24 +4,32 @@ const menuHeader = document.querySelector('.menu-header')
 const profilePic = document.querySelector('.profile-pic')
 const menuLogo = document.querySelector('#logo')
 const itemDesc = document.querySelectorAll('.item-desc')
+const menuItem = document.querySelectorAll('.menu-item')
 
 buttonCtrl.addEventListener('click', () => {
-    const isCollapsed = aside.classList === 'collapse'
-    
+    const isCollapsed = aside.style.width === '20em'
+
     if (!isCollapsed) {
-        // aside.style.width = 'unset'
-        aside.classList.add('collapse')
-        profilePic.classList.add('show-hide')
+        aside.classList.toggle('collapse')
         itemDesc.forEach((span) => {
-            span.classList.add('show-hide')
+            span.classList.toggle('show-hide')
         })
-        menuLogo.classList.add('show-hide')
+        menuItem.forEach((li) => {
+            li.classList.toggle('collapse')
+        })
+        menuLogo.classList.toggle('show-hide')
+        profilePic.classList.toggle('show-hide')
+        menuHeader.classList.toggle('justify-center')
     } else {
-        aside.classList.remove('collapse')
-        profilePic.classList.remove('show-hide')
+        aside.classList.toggle('collapse')
         itemDesc.forEach((span) => {
-            span.classList.remove('show-hide')
+            span.classList.toggle('show-hide')
         })
-        menuLogo.classList.remove('show-hide')
+        menuLogo.classList.toggle('show-hide')
+        menuItem.forEach((li) => {
+            li.classList.toggle('collapse')
+        })
+        profilePic.classList.toggle('show-hide')
+        menuHeader.classList.toggle('justify-center')
     }
 })
