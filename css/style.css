@@ -19,6 +19,7 @@ body {
     height: 100vh;
     background-color: var(--body-bg-color);
     display: flex;
+    gap: 1rem;
 }
 
 main {
@@ -34,7 +35,6 @@ aside {
 }
 
 ul {
-    max-width: 100%;
     display: flex;
     flex-flow: column;
     justify-content: center;
