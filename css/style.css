@@ -6,6 +6,7 @@
     --text-color: rgb(0, 5, 71);
     --padding-size: 1rem;
     --inner-text-color: #fff;
+    --hover-color: rgb(210, 210, 255);
 }
 
 * {
@@ -19,18 +20,27 @@ body {
     height: 100vh;
     width: 100vw;
     position: relative;
+    overflow: hidden;
 }
 
 main {
+    width: 75%;
+    height: 100%;
+    margin-left: 15em;
+    z-index: 1;
     background-color: var(--bg-color);
     color: var(--inner-text-color);
 }
 
 aside {
+    max-width: 15em;
+    height: 100%;
+    z-index: 1;
+    position: fixed;
     background-color: var(--bar-color);
     color: var(--text-color);
-    position: fixed;
-    height: 100%;
+    display: flex;
+    flex-flow: column;
 }
 
 aside .navbar {
@@ -38,11 +48,91 @@ aside .navbar {
     padding: var(--padding-size);
 }
 
-.menu-item {
-    list-style: none;
-}
-
 .menu-list a {
     color: var(--text-color);
     text-decoration: none;
 }
+
+.menu-item {
+    list-style: none;
+}
+
+aside .menu-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em 2em 0em;
+    line-height: 0;
+    border-radius: .5em;
+}
+
+aside .navbar .menu-list {
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    gap: var(--padding-size);
+}
+
+aside .navbar .menu-list .menu-item {
+    border-radius: .5em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: var(--padding-size);
+    padding: .8em var(--padding-size);
+    transition: background-color 300ms ease;
+    cursor: pointer;
+}
+
+aside .navbar .menu-list .menu-item:hover {
+    background-color: var(--hover-color);
+}
+
+aside .navbar .menu-list .search{
+    background-color: var(--bg-color);
+}
+
+aside .navbar .menu-list .menu-item #search {
+    width: 100%;
+    position: relative;
+    outline: none;
+    border: none;
+    font-size: 1em;
+    background-color: transparent;
+    color: var(--inner-text-color);
+}
+
+aside .navbar .menu-list .menu-item #search::placeholder {
+    opacity: 1;
+}
+
+aside .profile {
+    width: 100%;
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    gap: .5em;
+    padding: .3em .5em;
+    background-color: var(--hover-color);
+    color: var(--text-color);
+}
+
+aside .profile .profile-pic {
+    height: 48px;
+    width: 48px;
+    background-image: url('../assets/photo.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: .5em;
+}
+
+aside .profile .logout {
+    line-height: 0;
+    margin-left: auto;
+}
+
+
+
