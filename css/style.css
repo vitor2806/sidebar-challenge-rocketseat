@@ -77,8 +77,8 @@ aside .navbar .menu-list {
 }
 
 aside .navbar .menu-list .menu-item {
-    border-radius: .5em;
     width: 100%;
+    border-radius: .5em;
     display: flex;
     align-items: center;
     gap: var(--padding-size);
@@ -92,12 +92,18 @@ aside .navbar .menu-list .menu-item:hover {
 }
 
 aside .navbar .menu-list .search{
+    width: 100%;
+    border-radius: .5em;
+    display: flex;
+    align-items: center;
+    gap: var(--padding-size);
+    padding: .8em var(--padding-size);
+    cursor: pointer;
     background-color: var(--bg-color);
 }
 
-aside .navbar .menu-list .menu-item #search {
+aside .navbar .menu-list .search #search {
     width: 100%;
-    position: relative;
     outline: none;
     border: none;
     font-size: 1em;
@@ -105,7 +111,7 @@ aside .navbar .menu-list .menu-item #search {
     color: var(--inner-text-color);
 }
 
-aside .navbar .menu-list .menu-item #search::placeholder {
+aside .navbar .menu-list .search #search::placeholder {
     opacity: 1;
 }
 
@@ -127,6 +133,16 @@ aside .profile .profile-pic {
     background-size: cover;
     background-position: center;
     border-radius: .5em;
+}
+
+aside .profile p:nth-of-type(1) {
+    font-size: 1em;
+    line-height: 1;
+}
+
+aside .profile p:nth-of-type(2) {
+    font-size: .9em;
+    line-height: 1;
 }
 
 aside .profile .logout {
