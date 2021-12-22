@@ -26,7 +26,7 @@ body {
 main {
     width: calc(100% - 3.5em);
     height: 100%;
-    margin-left: calc(5em);
+    margin-left: 5em;
     background-color: var(--bg-color);
     color: var(--inner-text-color);
     padding: .2em var(--padding-size);
@@ -62,12 +62,15 @@ aside .menu-header {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     padding: 1em 2em 0em;
     line-height: 0;
     border-radius: .5em;
 }
 
+.menu-header .logo {
+    display: none;
+}
 aside .navbar .menu-list {
     width: 100%;
     display: flex;
@@ -82,7 +85,7 @@ aside .navbar .menu-list .menu-item {
     border-radius: .5em;
     display: flex;
     align-items: center;
-    gap: 1em;
+    gap: 1.8em;
     padding: .8em var(--padding-size);
     transition: background-color 300ms ease;
     cursor: pointer;
@@ -117,6 +120,7 @@ aside .navbar .menu-list .search #search::placeholder {
 }
 
 aside .profile {
+    height: 3.5em;
     width: 100%;
     margin-top: auto;
     display: flex;
@@ -129,7 +133,6 @@ aside .profile {
 }
 
 aside .profile .profile-pic {
-    display: none;
     height: 48px;
     width: 48px;
     background-image: url('../assets/photo.jpg');
@@ -138,7 +141,8 @@ aside .profile .profile-pic {
     border-radius: .5em;
 }
 
-aside .profile .user-info {
+aside .profile .user-info,
+aside .profile .profile-pic {
     display: none;
 }
 
@@ -151,9 +155,6 @@ aside .profile p:nth-of-type(2) {
     font-size: .9em;
     line-height: 1;
 }
-
-
-
 
 /* control visibility */
 
@@ -172,4 +173,21 @@ aside.open .user-info {
 
 aside.open .logout {
     margin-left: auto;
+}
+
+aside.open ~ main {
+    width: calc(100% - 15em);
+    margin-left: 15em;
+}
+
+aside.open .menu-list .menu-item {
+    gap: var(--padding-size);
+}
+
+aside.open .menu-header {
+    justify-content: space-between;
+}
+
+aside.open .menu-header .logo {
+    display: unset;
 }
