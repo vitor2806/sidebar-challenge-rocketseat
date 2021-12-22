@@ -4,6 +4,8 @@
     --light-green: #8ed7c6;
     --light-grey: #dce4e3;
     --text-color: #084236;
+    --padding-size: 1rem;
+    --gap-size: 1rem;
 }
 
 * {
@@ -19,7 +21,7 @@ body {
     height: 100vh;
     background-color: var(--body-bg-color);
     display: flex;
-    gap: 1rem;
+    gap: var(--gap-size);
 }
 
 main {
@@ -31,31 +33,6 @@ aside {
     background-color: var(--green);
     display: flex;
     flex-flow: column;
-    overflow-x: hidden;
-}
-
-ul {
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-    padding: .5rem;
-    gap: 1rem;
-}
-
-.menu-item {
-    width: 100%;
-    cursor: pointer;
-    list-style: none;
-    display: flex;
-    padding: 1rem;
-    border-radius: .3rem;
-    gap: 1rem;
-}
-
-.menu-item:focus,
-.menu-item:hover {
-    background-color: var(--light-green);
 }
 
 .menu-header {
@@ -65,13 +42,36 @@ ul {
     margin-top: 1rem;
 }
 
-.user-card {
+ul {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem;
+    gap: var(--gap-size);
+}
+
+.menu-item {
     width: 100%;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    padding: var(--padding-size);
+    border-radius: .5rem;
+    gap: var(--gap-size);
+}
+
+.menu-item:focus,
+.menu-item:hover {
+    background-color: var(--light-green);
+}
+
+.user-card {
     background-color: var(--light-green);
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1rem;
+    padding: var(--padding-size);
     margin-top: auto;
 }
 
