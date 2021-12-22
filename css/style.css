@@ -16,6 +16,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
+/* Outer box styles */
 body {
     height: 100vh;
     width: 100vw;
@@ -24,12 +25,13 @@ body {
 }
 
 main {
-    width: calc(100% - 3.5em);
+    width: 100%;
     height: 100%;
     margin-left: 5em;
     background-color: var(--bg-color);
     color: var(--inner-text-color);
     padding: .2em var(--padding-size);
+    transition: margin-left 750ms ease-in-out;
 }
 
 aside {
@@ -42,8 +44,11 @@ aside {
     background-color: var(--bar-color);
     color: var(--text-color);
     overflow-x: hidden;
+    transition: width 650ms ease;
 }
+/* Outer box styles */
 
+/* Inner aside styles */
 aside .navbar {
     max-width: 100%;
     padding: var(--padding-size);
@@ -87,7 +92,8 @@ aside .navbar .menu-list .menu-item {
     align-items: center;
     gap: 1.8em;
     padding: .8em var(--padding-size);
-    transition: background-color 300ms ease;
+    transition: background-color 300ms ease-out;
+    transition: gap 350ms linear;
     cursor: pointer;
 }
 
@@ -121,7 +127,6 @@ aside .navbar .menu-list .search #search::placeholder {
 
 aside .profile {
     height: 3.5em;
-    width: 100%;
     margin-top: auto;
     display: flex;
     align-items: center;
@@ -156,14 +161,17 @@ aside .profile p:nth-of-type(2) {
     line-height: 1;
 }
 
+aside .profile .logout {
+    line-height: 0;
+}
+
+/* Inner aside styles */
+
+
 /* control visibility */
 
 .open {
     width: 15em;
-}
-
-aside .profile .logout {
-    line-height: 0;
 }
 
 aside.open .profile-pic,
@@ -176,8 +184,8 @@ aside.open .logout {
 }
 
 aside.open ~ main {
-    width: calc(100% - 15em);
     margin-left: 15em;
+    transition: margin-left 350ms ease-in-out;
 }
 
 aside.open .menu-list .menu-item {
