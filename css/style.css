@@ -24,23 +24,24 @@ body {
 }
 
 main {
-    width: 75%;
+    width: calc(100% - 3.5em);
     height: 100%;
-    margin-left: 15em;
-    z-index: 1;
+    margin-left: calc(5em);
     background-color: var(--bg-color);
     color: var(--inner-text-color);
+    padding: .2em var(--padding-size);
 }
 
 aside {
     max-width: 15em;
+    width: 5.3em;
     height: 100%;
-    z-index: 1;
     position: fixed;
-    background-color: var(--bar-color);
-    color: var(--text-color);
     display: flex;
     flex-flow: column;
+    background-color: var(--bar-color);
+    color: var(--text-color);
+    overflow-x: hidden;
 }
 
 aside .navbar {
@@ -81,7 +82,7 @@ aside .navbar .menu-list .menu-item {
     border-radius: .5em;
     display: flex;
     align-items: center;
-    gap: var(--padding-size);
+    gap: 1em;
     padding: .8em var(--padding-size);
     transition: background-color 300ms ease;
     cursor: pointer;
@@ -120,6 +121,7 @@ aside .profile {
     margin-top: auto;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: .5em;
     padding: .3em .5em;
     background-color: var(--hover-color);
@@ -127,12 +129,17 @@ aside .profile {
 }
 
 aside .profile .profile-pic {
+    display: none;
     height: 48px;
     width: 48px;
     background-image: url('../assets/photo.jpg');
     background-size: cover;
     background-position: center;
     border-radius: .5em;
+}
+
+aside .profile .user-info {
+    display: none;
 }
 
 aside .profile p:nth-of-type(1) {
@@ -145,10 +152,24 @@ aside .profile p:nth-of-type(2) {
     line-height: 1;
 }
 
-aside .profile .logout {
-    line-height: 0;
-    margin-left: auto;
+
+
+
+/* control visibility */
+
+.open {
+    width: 15em;
 }
 
+aside .profile .logout {
+    line-height: 0;
+}
 
+aside.open .profile-pic,
+aside.open .user-info {
+    display: unset;
+}
 
+aside.open .logout {
+    margin-left: auto;
+}
