@@ -73,6 +73,13 @@ aside .menu-header {
     border-radius: .5em;
 }
 
+aside .menu-header #hamburger {
+    cursor: pointer;
+    border: none;
+    line-height: normal;
+    background-color: transparent;
+}
+
 .menu-header .logo {
     display: none;
 }
@@ -92,12 +99,12 @@ aside .navbar .menu-list .menu-item {
     align-items: center;
     gap: 1.8em;
     padding: .8em var(--padding-size);
-    transition: background-color 300ms ease-out;
-    transition: gap 350ms linear;
+    transition: 350ms linear gap;
     cursor: pointer;
 }
 
-aside .navbar .menu-list .menu-item:hover {
+aside .navbar .menu-list .menu-item:hover,
+aside .navbar .menu-list .menu-item:focus {
     background-color: var(--hover-color);
 }
 
