@@ -31,12 +31,12 @@ main {
     background-color: var(--bg-color);
     color: var(--inner-text-color);
     padding: .2em var(--padding-size);
-    transition: margin-left 750ms ease-in-out;
+    transition: margin-left 500ms;
 }
 
 aside {
     max-width: 15em;
-    width: 5.3em;
+    width: 5.4em;
     height: 100%;
     position: fixed;
     display: flex;
@@ -44,7 +44,7 @@ aside {
     background-color: var(--bar-color);
     color: var(--text-color);
     overflow-x: hidden;
-    transition: width 650ms ease;
+    transition: width 500ms;
 }
 /* Outer box styles */
 
@@ -192,7 +192,7 @@ aside.open .logout {
 
 aside.open ~ main {
     margin-left: 15em;
-    transition: margin-left 350ms ease-in-out;
+    transition: margin-left 500ms;
 }
 
 aside.open .menu-list .menu-item {
